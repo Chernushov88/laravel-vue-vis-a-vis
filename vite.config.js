@@ -15,16 +15,6 @@ export default defineConfig({
             '@': '/resources',
         },
     },
-    css: {
-        preprocessorOptions: {
-            scss: {
-                additionalData: `
-                @use "@/css/reset.scss";
-                @use "@/css/variables.scss";
-                `,
-            },
-        },
-    },
     build: {
         assetsInclude: ['**/*.woff2', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.svg'],
     },

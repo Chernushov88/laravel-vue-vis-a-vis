@@ -27,7 +27,7 @@ export default {
   </section>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 @use "@/css/variables.scss" as vars;
 
 .hero {
