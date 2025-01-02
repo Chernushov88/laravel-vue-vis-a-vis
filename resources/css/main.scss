@@ -1,0 +1,180 @@
+@use "@/css/reset.scss" as rest;
+@use "@/css/variables.scss" as vars;
+
+body {
+  font-family: vars.$interFont;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.container{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.dropdown{
+	position: relative;
+	&::after{
+		position: absolute;
+		top: 7px;
+		right: -5px;
+		display: inline-block;
+		content: '';
+		width: 9px;
+		height: 9px;
+		background: url(../assets/img/svg/arrow.svg) no-repeat;
+		// transition: 1s ease all;
+	}
+	&-menu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: vars.$white;
+		list-style: none;
+		margin: 0;
+		padding: 0.5rem 0;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		display: none;
+		li {
+			padding: 0.5rem 1rem;
+			a {
+				color: #333;
+				text-decoration: none;
+				&:hover {
+					color: #ff5f57;
+				}
+			}
+		}
+	}
+}
+
+.dropdown:hover {
+	&::after{
+		transform: rotate(180deg)
+	}
+	.dropdown-menu{
+		display: block;
+	}
+}
+
+a{
+	cursor: pointer;
+}
+
+.btn{
+	width: 162px;
+	height: 62px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-weight: 400;
+	font-size: 14px;
+	border: 1px solid vars.$primary;
+	font-family: vars.$interFont;
+	border-radius: 14px;
+  cursor: pointer;
+	text-decoration: none !important;
+	&_secondary{
+		background: transparent;
+		color: vars.$primary;
+		&:hover{
+			background: vars.$primary;
+			color: vars.$white;
+		}
+	}
+	&_primary{
+		background: vars.$primary;
+		color: vars.$white;
+		box-shadow: 1px 10px 42px -15px rgba(33,123,244,0.56);
+		&:hover{
+			background: vars.$white;
+			color: vars.$primary;
+		}
+	}
+	&-sm{
+		width: 177px;
+		height: 36px;
+		font-size: 12px;
+		background: rgba(33, 123, 244, 0.1);
+		border-radius: 8px;
+		border: 1px solid rgba(33, 123, 244, 0.1);
+		color: vars.$primary;
+		&:hover{
+			border: 1px solid vars.$primary;
+			background: vars.$primary;
+			color: vars.$white;
+		}
+	}
+}
+
+.checkbox {
+  vertical-align: middle;
+  margin: 0px 0 0 0;
+  width: 28px;
+  height: 28px;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+	outline: 0;
+
+  & + label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 38px;
+    display: flex;
+    align-items: center;
+  }
+
+  & + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: vars.$white;
+    // transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  &:not(:checked) + label:before {
+    background-color: vars.$white;
+    border-color: #ccc;
+  }
+
+  &:checked + label:before {
+		background: url(../assets/img/svg/checked.svg) no-repeat center;
+  }
+
+
+	&.is-invalid{
+		& + label:before {
+			border: 2px solid vars.$errors !important;
+		}
+	}
+}
+
+.hero-bg{
+	background: url(../assets/img/hero-bg.jpg) no-repeat;
+	background-size: cover;
+}
+
+// * {
+// 	outline: 1px solid;
+// }
+
+* {
+  transition: all 0.3s ease-in-out;
+}

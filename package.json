@@ -11,7 +11,17 @@
         "vite": "^5.0.0"
     },
     "dependencies": {
+        "@vee-validate/i18n": "^4.15.0",
+        "@vee-validate/rules": "^4.15.0",
         "@vitejs/plugin-vue": "^5.2.1",
-        "vue": "^3.5.13"
+        "material-design-icons": "^3.0.1",
+        "resemblejs": "^5.0.0",
+        "sass": "^1.83.0",
+        "typeface-inter": "^3.18.1",
+        "typeface-noto-sans": "^1.1.13",
+        "typeface-poppins": "^1.1.13",
+        "vee-validate": "^4.15.0",
+        "vue": "^3.5.13",
+        "yup": "^1.6.1"
     }
 }
