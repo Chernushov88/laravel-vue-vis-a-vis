@@ -1,4 +1,3 @@
-
 <template>
 	<section class="achievements-section">
 		<div class="container">

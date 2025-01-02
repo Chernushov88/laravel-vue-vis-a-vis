@@ -1,9 +1,15 @@
+<script>
+export default {
+  name: "HeroSection",
+};
+</script>
+
 <template>
   <section class="hero">
     <div class="container">
       <div class="hero-content">
         <div class="text-content">
-					<div class="btn btn-sm">Netbook community</div>
+			<div class="btn btn-sm">Netbook community</div>
           <h1>Your Solutions For Community!</h1>
           <p>
             More than 2 billion people in over countries use socibook to stay in touch with friends & family.
@@ -21,14 +27,8 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "HeroSection",
-};
-</script>
-
-<style scoped lang="scss">
-@use "@/css/variables.scss" as varsH;
+<style lang="scss">
+@use "@/css/variables.scss" as vars;
 
 .hero {
   padding: 72px 0 82px ;
@@ -44,7 +44,7 @@ export default {
 				max-width: 100%;
 			}
 			h1 {
-				font-family: varsH.$interFont;
+				font-family: vars.$interFont;
 				font-size: 3.5rem;
 				line-height: 1.2;
 				font-weight: bold;
