@@ -33,7 +33,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use "@/css/variables.scss" as varsST;
 
 .statistics {
